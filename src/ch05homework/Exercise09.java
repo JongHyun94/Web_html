@@ -25,6 +25,7 @@ public class Exercise09 {
 				//학생수>3
 				System.out.print("학생수> ");
 				studentNum = scanner.nextInt();
+				//studentNum = Integer.parseInt(scanner.nextLine());
 				scores = new int[studentNum];
 			}
 			else if(selectNo == 2) {
@@ -32,6 +33,7 @@ public class Exercise09 {
 				for(int i=0; i<scores.length; i++) {
 					System.out.print("scores[" + i + "]: ");
 					scores[i] = scanner.nextInt();
+					//studentNum = Integer.parseInt(scanner.nextLine());
 				}
 			}
 			else if(selectNo == 3) {
