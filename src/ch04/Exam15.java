@@ -16,7 +16,7 @@ public class Exam15 {
 			//data 변수의 값을 출력
 			System.out.println("출력: " + data);
 			
-			//if(data == "점심시간") { // 문자열에선 == 로 쓰면안된다.
+			//if(data == "점심시간") { // 문자열에선 참조여서 == 로 쓰면안된다.
 			//	break;
 			
 			//멈춤조건
