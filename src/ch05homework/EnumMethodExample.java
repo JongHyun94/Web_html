@@ -15,8 +15,8 @@ public class EnumMethodExample {
 		//compareTo() 메소드
 		Week day1 = Week.MONDAY;
 		Week day2 = Week.WEDNESDAY;
-		int result1 = day1.compareTo(day2);
-		int result2 = day2.compareTo(day1);
+		int result1 = day1.compareTo(day2); //-2일 차이
+		int result2 = day2.compareTo(day1); //+2일 차이
 		System.out.println(result1);
 		System.out.println(result2);
 		

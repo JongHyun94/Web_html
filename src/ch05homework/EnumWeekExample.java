@@ -6,8 +6,8 @@ public class EnumWeekExample {
 	public static void main(String[] args) {
 		Week today = null;
 		
-		Calendar cal = Calendar.getInstance();
-		int week = cal.get(Calendar.DAY_OF_WEEK);
+		Calendar cal = Calendar.getInstance(); // time zone ¾îµòÁö ¾ò¾î¿È
+		int week = cal.get(Calendar.DAY_OF_WEEK); // ¿äÀÏ ¾ò¾î¿È
 
 		switch(week) {
 			case 1:
