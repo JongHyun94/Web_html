@@ -28,6 +28,7 @@ public class BoardTeam {
          System.out.println("----------------------------------------------");
          System.out.print("메뉴 선택> ");
          
+         
          //메뉴 선택 번호
          int selectNo = Integer.parseInt(scanner.nextLine());
          /*
