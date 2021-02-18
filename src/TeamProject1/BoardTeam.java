@@ -1,5 +1,6 @@
 //이클립스 콘솔에서 사용할 수 있는 게시판을 만드시오.
 //기능 : 목록, 생성, 읽기, 수정, 삭제, 종료
+// > 입력 받는 모양 , : 출력 모양
 package TeamProject1;
 
 //Scanner 객체 사용하기 위한 import
@@ -23,11 +24,11 @@ public class BoardTeam {
        *  true환경에선 계속 작동하면서 메뉴 화면 출력, false 환경에선 작동 종료
        */  
       while(run) {
+    	 //출력 메뉴 화면
          System.out.println("----------------------------------------------");
          System.out.println("1.목록 | 2.생성 | 3.읽기 | 4.수정 | 5.삭제 | 6. 종료");
          System.out.println("----------------------------------------------");
          System.out.print("메뉴 선택> ");
-         
          
          //메뉴 선택 번호
          int selectNo = Integer.parseInt(scanner.nextLine());
@@ -40,7 +41,7 @@ public class BoardTeam {
             System.out.println("----------------------------------------------");
             
             // index sorting
-                if(myBoard == null && myBoard.length > 0 || count == 0) {
+            if(myBoard == null && myBoard.length > 0 || count == 0) {
                    System.out.println("                 빈 내용                   ");
             }
             // 
@@ -192,10 +193,10 @@ public class BoardTeam {
             System.out.print("번호> ");
             //번호 index 
             String temp = scanner.nextLine();
-            int selectIndex = Integer.parseInt(temp) - 1;
+            int selectIndex = Integer.parseInt(temp) - 1; // 인덱스값은 -1 차이
             if(temp != null) {
-               // null로 다 채우기..
-               for(int i=0;i<5;i++) {
+               // 모든 항목 null로 다 채우기.
+               for(int i=0;i<5;i++) { //5항목
                   myBoard[selectIndex][i] = null;
                }
             }
@@ -208,6 +209,12 @@ public class BoardTeam {
           */
          else if(selectNo == 6) {
             run = false;
+         }
+         /**
+          * 추가 기능: 1-6이외의 값 입력됐을경우
+          */
+         else {
+        	 System.out.println("잘못된 입력방식입니다.");
          }
       }
       
