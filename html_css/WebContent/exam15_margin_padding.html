@@ -4,22 +4,52 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <style type="text/css">
-body {
-	/* background-color: #f1f3f5; */
-	background-image: url("common/images/3.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
+* {
+	margin: 0px;
+	padding: 0px;
 }
+
+#wrapper {
+	width: 1024px;
+	margin: 0px, auto;
+	background-color: #f1f1f1;
+}
+
 #div1 {
-	background-color: red;
-	height: 50px;
-	opacity: 0.5;
+	width: 200px;
+	height: 200px;
+	background-color: #ced4da;
+}
+
+#div2 {
+	width: 200px;
+	height: 200px;
+	background-color: #ced4da;
+	margin: 10px 20px;
+	/*top right botton left 순으로  2개 짜리는 위 아래*/
+	padding: 10px 10px 10px 30px;
+}
+
+#div21 {
+	width: 100px;
+	height: 100px;
+	background-color: #ffffff;
+}
+
+#div3 {
+	width: 200px;
+	height: 200px;
+	background-color: #ced4da;
 }
 </style>
 </head>
 <body>
-
-<div id="div1"></div>
-
+	<div id="wrapper">
+		<div id="div1"></div>
+		<div id="div2">
+			<div id="div21"></div>
+		</div>
+		<div id="div3"></div>
+	</div>
 </body>
 </html>
