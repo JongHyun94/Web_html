@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet"
+	href="common/bootstrap-4.6.0-dist/css/bootstrap.min.css">
+<script src="common/jquery/jquery-3.5.1.min.js"></script>
+<script src="common/bootstrap-4.6.0-dist/js/bootstrap.bundle.min.js"></script>
+<script src="common/bootstrap-4.6.0-dist/js/bootstrap.min.js"></script>
+<script>
+	//JSON으로 객체를 생성
+	var car1 = {
+			type:"승용차",
+			model:"그랜저",
+			price:10000,
+			speed: 0,
+			sound: function(){
+				console.log("빵빵");
+			},
+			setSpeed: function(speed){
+				this.speed = speed;
+			}
+	};
+	console.log(car1.type);
+	car1.sound();
+	car1.setSpeed(60);
+	console.log(car1.speed);
+	
+	//Prototype을 이용한 클래스 선언
+	function Car(){
+		this.type = "승용차";
+		this.model = "그랜저";
+		this.price = 10000;
+		this.speed = 0;
+		this.sound = function(){
+			console.log("빵빵");
+		};
+		this.setSpeed = (speed) => {
+			this.speed = speed;
+		};
+	}
+	
+	var car2 = new Car();
+	console.log(car2.type);
+	car2.sound();
+	car2.setSpeed(60);
+	console.log(car2.speed);
+	var car3 = new Car();
+	console.log(car3);
+	
+</script>
+</head>
+<body>
+	<div class="card">
+		<div class="card-header">클래스(객체의 설계도)</div>
+		<div class="card-body">
+			
+		</div>
+	</div>
+</body>
+</html>

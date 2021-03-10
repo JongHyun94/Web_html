@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet"
+	href="common/bootstrap-4.6.0-dist/css/bootstrap.min.css">
+<script src="common/jquery/jquery-3.5.1.min.js"></script>
+<script src="common/bootstrap-4.6.0-dist/js/bootstrap.bundle.min.js"></script>
+<script src="common/bootstrap-4.6.0-dist/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+	<div class="card">
+		<div class="card-header">JavaScript Variables</div>
+		<div class="card-body">
+			<script>
+				//2015 이전 문법(ES5: ECMAScript 5)
+				var var1 = 5;
+				var var2 = "홍길동";
+				if(true){
+					var var3 = true;
+				}
+				console.log(var1);
+				console.log(var2);
+				console.log(var3);
+			</script>
+
+			<script>
+				//2015년 이후 문법(ES6)
+				let var4 = 5;
+				let var5 = "홍길동";
+				if(true){
+					//block level 지원
+					let var6 =true;
+				}
+				console.log(var4);
+				console.log(var5);
+				console.log(var6);
+			</script>
+
+			<script>
+				//2015년 이후 문법
+				const var7 = 5;
+				
+				if(true){
+					//block level 지원
+					const var8 =true;
+				}
+				//값 수정 안됨
+				var7 = 10;
+				console.log(var7);
+				console.log(var8);
+			</script>
+		</div>
+	</div>
+</body>
+</html>

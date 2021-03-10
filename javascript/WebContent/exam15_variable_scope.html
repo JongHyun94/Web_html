@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet"
+	href="common/bootstrap-4.6.0-dist/css/bootstrap.min.css">
+<script src="common/jquery/jquery-3.5.1.min.js"></script>
+<script src="common/bootstrap-4.6.0-dist/js/bootstrap.bundle.min.js"></script>
+<script src="common/bootstrap-4.6.0-dist/js/bootstrap.min.js"></script>
+<script>
+//Global(전역 변수)
+var var1 = 3;
+
+function fun1(){
+	//Local(함수 블록 변수)
+	var var2 = 5;
+	
+	//Global(전역 변수)
+	var3 = 7;
+	
+	if(true){
+		var var4 = 11;
+		let var5 = 13;
+		const var6 = 15;
+	}
+	console.log(var2);
+	console.log(var4);
+	//console.log(var5); //let과 const 는 블록레벨에서만 가능함 
+	//console.log(var6);
+}
+fun1();
+console.log(var1);
+//console.log(var2);
+console.log(var3);
+</script>
+</head>
+<body>
+	<div class="card">
+		<div class="card-header">변수 사용 범위</div>
+		<div class="card-body">
+			
+		</div>
+	</div>
+</body>
+</html>

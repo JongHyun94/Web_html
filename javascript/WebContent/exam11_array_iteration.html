@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet"
+	href="common/bootstrap-4.6.0-dist/css/bootstrap.min.css">
+<script src="common/jquery/jquery-3.5.1.min.js"></script>
+<script src="common/bootstrap-4.6.0-dist/js/bootstrap.bundle.min.js"></script>
+<script src="common/bootstrap-4.6.0-dist/js/bootstrap.min.js"></script>
+<script>
+var fruits = ["apple", "orange", "cherry"];
+
+//forEach 반복 처리 return type 없다
+fruits.forEach(function(item, index){
+	console.log(index,item);
+});
+
+fruits.forEach((item, index)=>{
+	console.log(index,item);
+});
+
+fruits.forEach(item => console.log(item));
+
+//map 반복 처리를 해서 원래 아이템을 변형시킴 return type 배열
+var arr1 = fruits.map(item=>item.length);
+console.log(arr1);
+
+//filter 반복 처리를 해서 필요없는 아이템을 제거
+var arr2 = fruits.filter(item=>{
+	if(item.startsWith("o")){
+		return false;
+	}
+	else{
+		return true;
+	}
+});
+console.log(arr2);
+
+
+//reduce 반복 처리를 해서 단일값 얻기
+var numbers1 = [45, 4, 9, 16, 25];
+var sum = numbers1.reduce((total,value)=>total+value); //초기값을 안넣어주면 45 부터 들어감 total에 
+
+/* function myFunction(total, value, index, array) {
+	console.log(total,value);
+  return total + value;
+} */
+console.log(sum);
+</script>
+</head>
+<body>
+	<div class="card">
+		<div class="card-header">배열 정리</div>
+		<div class="card-body">
+			
+		</div>
+	</div>
+</body>
+</html>

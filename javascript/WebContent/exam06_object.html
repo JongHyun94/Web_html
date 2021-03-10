@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet"
+	href="common/bootstrap-4.6.0-dist/css/bootstrap.min.css">
+<script src="common/jquery/jquery-3.5.1.min.js"></script>
+<script src="common/bootstrap-4.6.0-dist/js/bootstrap.bundle.min.js"></script>
+<script src="common/bootstrap-4.6.0-dist/js/bootstrap.min.js"></script>
+	<script>
+		/* const car = {type:"Fiat", model:"500", color:"white"}; */
+		const car= {
+				type:"승용차",
+				model:"그랜저",
+				color:"검정",
+				speed:0,
+				owner: null,
+				
+				run: function(){
+					console.log("달립니다");
+				},
+				
+				setSpeed: function(speed){
+					this.speed = speed;
+				},
+				//리턴값 
+				getSpeed() {
+					return this.speed;
+				},
+				
+				sound: function() {console.log("띠띠");}, //void
+					
+				changeOwner: function(name) {
+					this.owner = name;
+					console.log("소유자가 "+ this.owner + "입니다.");
+				}
+		};
+		
+		const readProperties = () => {
+			console.group("car info");
+			console.log(car.type);
+			console.log(car.model);
+			console.log(car.color);
+			console.groupEnd();
+		};
+		
+		const readProperty = (propName) => {
+			console.log(car[propName]);
+		};
+		
+		const methodCall = () => {
+			car.run();
+			car.setSpeed(100);
+			console.log(car.getSpeed());
+			car.sound();
+			car.changeOwner("홍길동");
+			readProperties();
+		};
+	</script>
+</head>
+<body>
+	<div class="card">
+		<div class="card-header">JavaScript Function</div>
+		<div class="card-body">
+			<button onclick="readProperties()" class="btn btn-success btn-sm"> 객체 속성 읽기</button>
+			<a class="btn btn-success btn-sm" href="javascript:readProperty('model')">객체 속성 읽기</a>
+			<a class="btn btn-success btn-sm" href="javascript:methodCall()">객체 속성 읽기</a>
+		</div>
+	</div>
+</body>
+</html>

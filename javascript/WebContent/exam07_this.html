@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet"
+	href="common/bootstrap-4.6.0-dist/css/bootstrap.min.css">
+<script src="common/jquery/jquery-3.5.1.min.js"></script>
+<script src="common/bootstrap-4.6.0-dist/js/bootstrap.bundle.min.js"></script>
+<script src="common/bootstrap-4.6.0-dist/js/bootstrap.min.js"></script>
+	<script>
+		console.log(this);//window 객체 참조
+		//차이점 객체 내부에서 사용할 때 차이가난다. function은 자기를 호출한 객체를 this를 찾지만 화살표함수는 상위 this를 참조한다.
+		const person = {
+			name: "홍길동",
+			age: 25,
+			eat: function() {
+				console.log(this); //function 함수 내부의 this는 자신을 호출한 객체를 참조
+			},
+			//{}와 같이 선언된 객체 내부의 메소드에서는 화살표 함수를 사용하지않는다.
+			walk: () => {
+				console.log(this); //화살표 함수 내부의 this는 상위의 this를 찾아서 지정
+				this.age = 30;
+			},
+			setName(name) {
+				this.name = name;
+				console.log(this.name);
+				console.log(this);
+			}
+		};
+		person.eat(); //person 객체 참조
+		person.walk();//window 객체 참조
+		console.log(person.age); //25
+		console.log(age);        //30
+		person.setName("하하");
+		
+		const method = person.eat;
+		method(); //window 객체
+		
+		//클래스 선언
+		var People = function(){
+			this.name = "홍길동";
+			this.age = 25;
+			this.walk = () => {
+				console.log(this);
+			};
+		};
+		//클래스로 부터 객체 생성
+		var p1 = new People();
+		p1.walk();
+	</script>
+</head>
+<body>
+	<div class="card">
+		<div class="card-header">JavaScript this</div>
+		<div class="card-body">
+		
+		</div>
+	</div>
+</body>
+</html>

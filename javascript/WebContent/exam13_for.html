@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet"
+	href="common/bootstrap-4.6.0-dist/css/bootstrap.min.css">
+<script src="common/jquery/jquery-3.5.1.min.js"></script>
+<script src="common/bootstrap-4.6.0-dist/js/bootstrap.bundle.min.js"></script>
+<script src="common/bootstrap-4.6.0-dist/js/bootstrap.min.js"></script>
+<script>
+
+//객체
+const board = {bno:1,ntitle:"오늘은 좋은날",writer:"땡잡아"};
+for(key in board){ // 값이 바뀔때마다 key가 새로 선언됨
+	let value = board[key];
+	console.log(key,":",value);
+}
+
+
+//배열 
+const boards = [
+	{bno:1,ntitle:"오늘은 좋은날",writer:"땡잡아"},
+	{bno:2,ntitle:"오늘은 공부하는 날",writer:"땡큐"},
+	{bno:3,ntitle:"오늘은 과제하는 날",writer:"신난다"}
+];
+for(board2 of boards){
+	for(key in board2){ // 값이 바뀔때마다 key가 새로 선언됨
+		let value = board2[key];
+		console.log(key,":",value);
+	}
+}
+</script>
+</head>
+<body>
+	<div class="card">
+		<div class="card-header">for 문</div>
+		<div class="card-body">
+			
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet"
+	href="common/bootstrap-4.6.0-dist/css/bootstrap.min.css">
+<script src="common/jquery/jquery-3.5.1.min.js"></script>
+<script src="common/bootstrap-4.6.0-dist/js/bootstrap.bundle.min.js"></script>
+<script src="common/bootstrap-4.6.0-dist/js/bootstrap.min.js"></script>
+<script>
+	//클래스 선언
+	class Car{
+		//생성자 오버로딩이 안됨
+		/* constructor(){
+			this.kind="승용차";
+			this.model="그랜저";
+			this.speed=0;
+		} */
+		constructor(kind,model){
+			if(kind === undefined || model === undefined){
+				this.kind="승용차";
+				this.model="그랜저";
+				this.speed=0;
+			}
+			else{
+				this.kind=kind;
+				this.model=model;
+				this.speed=0;
+			}
+			
+		}
+		
+		sound() {
+			console.log("빵빵");
+		}
+		
+		setSpeed(speed){
+			this.speed = speed;
+		}
+	}
+	//객체 생성
+	const myCar = new Car("승용차","그랜저");
+	//필드 접근
+	console.log(myCar.kind);
+	console.log(myCar.model);
+	console.log(myCar.speed);
+	//메소드 호출
+	myCar.sound();
+	myCar.setSpeed(100);
+	console.log(myCar.speed);
+	
+	const yourCar = new Car();
+	console.log(yourCar);
+	
+</script>
+</head>
+<body>
+	<div class="card">
+		<div class="card-header">클래스(객체의 설계도)</div>
+		<div class="card-body">
+			
+		</div>
+	</div>
+</body>
+</html>

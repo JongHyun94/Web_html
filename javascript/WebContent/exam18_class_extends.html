@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet"
+	href="common/bootstrap-4.6.0-dist/css/bootstrap.min.css">
+<script src="common/jquery/jquery-3.5.1.min.js"></script>
+<script src="common/bootstrap-4.6.0-dist/js/bootstrap.bundle.min.js"></script>
+<script src="common/bootstrap-4.6.0-dist/js/bootstrap.min.js"></script>
+<script>
+	//클래스 선언
+	class Car{
+		constructor(kind,model){
+			this.kind=kind;
+			this.model=model;		
+		}
+		
+		sound() {
+			console.log("빵빵");
+		}
+		
+	}
+	class SportsCar extends Car{
+		constructor(kind,model,maxSpeed){
+			super(kind,model);
+			this.maxSpeed = maxSpeed;
+		}
+		run(){
+			console.log(this.maxSpeed+"로 달립니다.");
+		}
+		static info(){
+			console.log("경주용 자동차 클래스입니다.");
+		}
+	}
+	const myCar = new SportsCar("경주차","포르쉐",300);
+	console.log(myCar.kind);
+	console.log(myCar.model);
+	console.log(myCar.maxSpeed);
+	myCar.sound();
+	myCar.run();
+	SportsCar.info();
+</script>
+</head>
+<body>
+	<div class="card">
+		<div class="card-header">클래스(객체의 설계도)</div>
+		<div class="card-body">
+			
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet"
+	href="common/bootstrap-4.6.0-dist/css/bootstrap.min.css">
+<script src="common/jquery/jquery-3.5.1.min.js"></script>
+<script src="common/bootstrap-4.6.0-dist/js/bootstrap.bundle.min.js"></script>
+<script src="common/bootstrap-4.6.0-dist/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+	<div class="card">
+		<div class="card-header">JavaScript Variables</div>
+		<div class="card-body">
+			<script>
+				let x = 2;
+				let result = x ** 3;
+				console.log("result: ",result);
+				
+				x **= 4;
+				console.log("x:",x);
+			</script>
+
+			<script>
+				let var1 = 3.5;
+				console.log(typeof var1); //number type
+				let var2 = "Java Script";
+				console.log(typeof var2); //string type
+				let var3 = false;
+				console.log(typeof var3); //boolean type
+				let var4 = {name:"Javascript"};
+				console.log(typeof var4); //object type
+				let var5 = function() {};
+				console.log(typeof var5); //function type
+
+				let var6 = () => {};		// 화살표 함수 람다식
+				console.log(typeof var6); //function type
+	
+			</script>
+			
+			<script>
+				let var7 = 3;
+				let var8 = "3";
+				console.log(var7 == var8);
+				console.log(var7 === var8);
+				
+				console.log(var7 != var8);
+				console.log(var7 !== var8);
+			</script>
+			
+			<script>
+				/* const var9 = "" || "abc";
+				console.log("var9:",var9);
+				
+				const var10 = null || "abc";
+				console.log("var10:",var10);
+				
+				var var11 = 0; //0도 false의 의미
+				var var12 = var11 || 5;
+				console.log("var12:",var12);
+				 */
+				/* var var14 = var13 || 10; // 정의 안해서 에러 남 
+				console.log("var14:",var14); */
+				
+				/* var var15 = false;
+				var var16 = var15 || 5;
+				console.log("var16:",var16); */
+				//부정의 값 || 값 => 값
+				console.log("" || "abc");
+				console.log(null || "abc");
+				var var9;
+				console.log(var9 || 5);
+				console.log(0 || 5);
+				console.log(false || 5);
+				
+				//긍정의 값 || 값 => 긍정의 값
+				console.log("abce" || "abcd"); // abce
+				console.log(1 || "abc");
+				console.log(true || "abc");
+				//부정의값 && 값 => 부정의 값
+				console.log("" && "abc"); // ""값 들어감
+				console.log(null && "abc");// null값 들어감
+				console.log(false && "abc");//false 값 들어감
+				//긍정의값 && 값 => 값
+				console.log("a" && "abc"); //abc가 나옴
+				console.log(true && "abc");//abc 값 들어감
+				
+				var var10;
+				console.log(typeof var10); //undefined
+				
+			</script>
+		</div>
+	</div>
+</body>
+</html>
