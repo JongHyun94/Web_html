@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet"
+	href="/javascript/common/bootstrap-4.6.0-dist/css/bootstrap.min.css">
+<script src="/javascript/common/jquery/jquery-3.5.1.min.js"></script>
+<script
+	src="/javascript/common/bootstrap-4.6.0-dist/js/bootstrap.bundle.min.js"></script>
+<script
+	src="/javascript/common/bootstrap-4.6.0-dist/js/bootstrap.min.js"></script>
+<script>
+const check = () => {
+	var tel = document.querySelector("#tel");
+	var value = tel.value;
+	
+	console.log(value);
+	
+	//010-3자리-4자리 
+	//     /010-\d{3,4}-\d{4}/
+	//     "010-\\d{3,4}-\\d{4}""
+	
+	var patt = new RegExp(/010-\d{3,4}-\d{4}$/);
+	var result = patt.test(value);
+	console.log(result);
+};
+</script>
+
+</head>
+<body>
+	<div class="card">
+	<div class="form-group">
+		<label>전화번호:</label>
+		 <input id="tel" type="text" class="form-control"/>
+		</div>
+		<button class="btn btn-success btn-sm" onclick="check()">확인</button>
+	</div>
+</body>
+</html>

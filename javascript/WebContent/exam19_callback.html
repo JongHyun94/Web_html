@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet"
+	href="common/bootstrap-4.6.0-dist/css/bootstrap.min.css">
+<script src="common/jquery/jquery-3.5.1.min.js"></script>
+<script src="common/bootstrap-4.6.0-dist/js/bootstrap.bundle.min.js"></script>
+<script src="common/bootstrap-4.6.0-dist/js/bootstrap.min.js"></script>
+<script>
+function fun1(){
+	console.log("fun1() 함수 호출");
+	fun2(fun3, fun4);
+}
+function fun2(success, failure){
+	console.log("시간을 요하는 작업...");
+	let result=true;
+	if(result){
+		success(); //성공 콜백
+	}
+	else{
+		failure(); //실패 콜백
+	}
+	//callback();
+}
+function fun3(){
+	
+	console.log("작업 성공 완료 통보");
+}
+function fun4(){
+	console.log("작업 실패 통보");
+}
+</script>
+</head>
+<body>
+	<div class="card">
+		<div class="card-header">콜백 이해하기</div>
+		<div class="card-body">
+			<button onclick="fun1()" class="btn btn-danger btn-sm">
+				함수호출
+			</button>
+		</div>
+	</div>
+</body>
+</html>

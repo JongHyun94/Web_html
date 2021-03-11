@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet"
+	href="/javascript/common/bootstrap-4.6.0-dist/css/bootstrap.min.css">
+<script src="/javascript/common/jquery/jquery-3.5.1.min.js"></script>
+<script
+	src="/javascript/common/bootstrap-4.6.0-dist/js/bootstrap.bundle.min.js"></script>
+<script
+	src="/javascript/common/bootstrap-4.6.0-dist/js/bootstrap.min.js"></script>
+<script>
+	const handleClick1 = () => {
+		var mydiv = $(".mydiv");  // mydiv 객체 5개 들어있음 인덱스 0~4
+		mydiv.css("background-color","yellow");
+		mydiv.html("<img src='/javascript/common/images/photo2.jpg' width='50'/>");
+	};
+	const handleClick2 = () => {
+		var my_red = $(".my_red");  // my_red 객체 3개 들어있음 인덱스 0~4
+		my_red.css("background-color","red");
+	};
+	const handleClick3 = () => {
+		var myImg = $("#imgBox1, #imgBox2");  // id 는 1개밖에안들어옴 두개 아이디 들어올땐 각각 들어가게해줌 //셀렉터 문법 적용됨
+		myImg.append("<img src='/javascript/common/images/photo1.jpg' height='100'/>");
+	};
+</script>
+<style>
+.mydiv{
+	width: 100px;
+	height: 100px;
+	display: inline-block;
+	border: 1px solid black;
+	margin: 10px;
+}
+</style>
+</head>
+<body>
+	<div class="card">
+	<div class="card-header">
+		jQuery() 함수가 리턴하는 컬렉션 사용 방법
+	</div>
+	
+		<div class="card-body">
+		<button class="btn btn-danger btn-sm mb-2" onclick="handleClick1()">모든 DIV 배경 변경 버튼</button>
+		<button class="btn btn-danger btn-sm mb-2" onclick="handleClick2()">my_red DIV 배경 변경 버튼</button>
+		<button class="btn btn-danger btn-sm mb-2" onclick="handleClick3()">이미지 추가 버튼</button>
+		<hr/>
+			<div class="mydiv"></div>
+			<div class="mydiv"></div>
+			<div class="mydiv my_red"></div>
+			<div class="mydiv my_red"></div>
+			<div class="mydiv my_red"></div>
+			
+			<hr/>
+			<div id="imgBox1"></div>
+			<div id="imgBox2"></div>
+		</div>
+	</div>
+</body>
+</html>

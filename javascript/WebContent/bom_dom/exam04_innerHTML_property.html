@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet"
+	href="/javascript/common/bootstrap-4.6.0-dist/css/bootstrap.min.css">
+<script src="/javascript/common/jquery/jquery-3.5.1.min.js"></script>
+<script
+	src="/javascript/common/bootstrap-4.6.0-dist/js/bootstrap.bundle.min.js"></script>
+<script
+	src="/javascript/common/bootstrap-4.6.0-dist/js/bootstrap.min.js"></script>
+<script>
+	const handleClick = () => {
+		const div1 = document.querySelector("#div1");
+		div1.innerHTML += "<img src='/javascript/common/images/photo1.jpg' height='100' />";
+	};
+	
+	function init(){
+		const btn2 = document.querySelector("#btn2");
+		btn2.addEventListener("click", () => {
+			const div2 = document.querySelector("#div2");
+			div2.innerHTML += "<img src='/javascript/common/images/photo2.jpg' height='100' />";
+		});
+	}
+	
+
+</script>
+</head>
+<body onload="init()">
+	<div class="card">
+		<div class="card-header">Element 객체의 innerHTML 속성 사용하기</div>
+		<div class="card-body">
+			<div>
+				<button id="btn1" onclick="handleClick()" class="btn btn-primary btn-sm">
+					내용넣기</button>
+					<button id="btn2" class="btn btn-primary btn-sm">
+					내용넣기2</button>
+				<hr>
+				<div id="div1"></div>
+				<div id="div2"></div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

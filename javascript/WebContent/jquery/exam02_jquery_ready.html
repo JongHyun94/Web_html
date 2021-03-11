@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet"
+	href="/javascript/common/bootstrap-4.6.0-dist/css/bootstrap.min.css">
+<script src="/javascript/common/jquery/jquery-3.5.1.min.js"></script>
+<script
+	src="/javascript/common/bootstrap-4.6.0-dist/js/bootstrap.bundle.min.js"></script>
+<script
+	src="/javascript/common/bootstrap-4.6.0-dist/js/bootstrap.min.js"></script>
+<script>
+	$(document).ready(function() { //document가 준비가 되었을때 한다. => 준비가 된거는 위부터 아래까지 다 읽은 상태
+		
+	});
+
+//객체를 만드는것까지가 ready img태그가 있다는것 까지 알겠어 그치만 이미지파일은 업로딩까지는 안됫엉 
+//html 파일만 받는건 ready야
+//load는 이미지까지 다 받을때 
+$(function(){
+	console.log("ready");
+	var img1 = $("#img1");
+	img1.attr("src","../common/images/photo10.jpg");
+});
+
+
+/* $(document).ready(function() {
+   var img1=$("#img1");
+   img1.attr("src","/javascript/common/images/photo1.jpg");
+}) */
+
+$(function(){
+   console.log("ready1");
+   var img1=$("#img1");
+   img1.attr("src","/javascript/common/images/photo1.jpg");
+});
+$(function(){
+   console.log("ready2");
+   var img1=$("#img1");
+   img1.attr("src","/javascript/common/images/photo1.jpg");
+});
+
+
+function init () {
+	console.log("loding");
+}
+</script>
+
+</head>
+<body onload="init()">
+	<div class="card">
+	<div class="card-header">
+		jQuery() 함수가 리턴하는 컬렉션 사용 방법
+	</div>
+	
+		<div class="card-body">
+			<img src="../common/images/photo1.jpg" height="100"/>
+			<img src="../common/images/photo2.jpg" height="100"/>
+			<img src="../common/images/photo3.jpg" height="100"/>
+			<img src="../common/images/photo4.jpg" height="100"/>
+			<img src="../common/images/photo5.jpg" height="100"/>
+		</div>
+	</div>
+</body>
+</html>

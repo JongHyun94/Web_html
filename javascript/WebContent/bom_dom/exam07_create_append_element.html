@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet"
+	href="/javascript/common/bootstrap-4.6.0-dist/css/bootstrap.min.css">
+<script src="/javascript/common/jquery/jquery-3.5.1.min.js"></script>
+<script
+	src="/javascript/common/bootstrap-4.6.0-dist/js/bootstrap.bundle.min.js"></script>
+<script
+	src="/javascript/common/bootstrap-4.6.0-dist/js/bootstrap.min.js"></script>
+<script>
+	const handleAddElement1 = () => {
+		const div1 = document.querySelector("#div1");
+		div1.innerHTML = "<p>그림<img src='/javascript/common/images/photo1.jpg' height='100'/></p>";
+	};	
+	
+	const handleAddElement2 = () => {
+		//생성
+		const elementP = document.createElement("p");
+		const textNode = document.createTextNode("그림");
+		const elementImg = document.createElement("img");
+		elementImg.setAttribute("src","/javascript/common/images/photo2.jpg");
+		elementImg.setAttribute("height","100");
+		//추가시킴
+		elementP.appendChild(textNode);
+		elementP.appendChild(elementImg);
+		
+		const div2 = document.querySelector("#div2");
+		div2.appendChild(elementP);
+	};
+	
+	const handleAddElement3 = (text, imgFile) => {
+		const div3 = document.querySelector("#div3");
+		div3.innerHTML = "<p>"+ text +"<img src='/javascript/common/images/"+ imgFile +"' height='100'/></p>";
+	};
+	
+	//백틱(`)을 이용한 매개변수화된 문자열 이용
+	const handleAddElement4 = (text, imgFile) => {
+		const div4 = document.querySelector("#div4");
+		div4.innerHTML = `<p>${text}<img src="/javascript/common/images/${imgFile}" height="100"/></p>`;
+	};
+</script>
+
+</head>
+<body >
+	<div class="card">
+		<div class="card-header">동적 엘리먼트 속성 사용하기</div>
+		<div class="card-body">
+			<button onclick="handleAddElement1()" class="btn btn-info btn-sm">동적 엘리먼트 추가</button>
+			<button onclick="handleAddElement2()" class="btn btn-info btn-sm">동적 엘리먼트 추가</button>
+			<button onclick="handleAddElement3('그림','photo3.jpg')" class="btn btn-info btn-sm">동적 엘리먼트 추가</button>
+			<button onclick="handleAddElement4('그림','photo4.jpg')" class="btn btn-info btn-sm">동적 엘리먼트 추가</button>
+			<hr>
+			<div>
+				<div id="div1"></div>
+				<div id="div2"></div>
+				<div id="div3"></div>
+				<div id="div4"></div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

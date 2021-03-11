@@ -60,6 +60,21 @@
 	console.log(fruits);
 	fruits.reverse();     // Then reverse the order of the elements
 	console.log(fruits);
+	
+	//구조 분해 할당
+	var arr100 = [10,20];
+	/* var x = arr1[0];
+	var y = arr1[1]; */
+	var [x, y] = arr100;
+	console.log("x:",x);
+	console.log("y:",y);
+	
+	//구조 분해 할당2
+	var arr101 = [10,20,30,40,50];
+	var [x1,y1, ...rest] = arr101;
+	console.log("x1:",x1);
+	console.log("y1:",y1);
+	console.log("rest:",rest);
 </script>
 </head>
 <body>

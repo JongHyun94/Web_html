@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet"
+	href="/javascript/common/bootstrap-4.6.0-dist/css/bootstrap.min.css">
+<script src="/javascript/common/jquery/jquery-3.5.1.min.js"></script>
+<script
+	src="/javascript/common/bootstrap-4.6.0-dist/js/bootstrap.bundle.min.js"></script>
+<script
+	src="/javascript/common/bootstrap-4.6.0-dist/js/bootstrap.min.js"></script>
+<script>
+	function closeWindow() {
+		window.close();
+	}
+	function transferData(){
+		var input = window.opener.document.getElementById("txtData");
+		input.value="자바스크립트";
+	}
+
+</script>
+</head>
+<body>
+	<div class="card">
+		<div class="card-header">Global Function 사용하기</div>
+		<div class="card-body">
+			<button class="btn btn-primary btn-sm" onclick="closeWindow()">닫기</button>
+			
+			<button class="btn btn-primary btn-sm" onclick="transferData()">함수 호출</button>
+
+
+		</div>
+	</div>
+</body>
+</html>

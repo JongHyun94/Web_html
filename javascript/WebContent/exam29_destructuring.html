@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet"
+	href="common/bootstrap-4.6.0-dist/css/bootstrap.min.css">
+<script src="common/jquery/jquery-3.5.1.min.js"></script>
+<script src="common/bootstrap-4.6.0-dist/js/bootstrap.bundle.min.js"></script>
+<script src="common/bootstrap-4.6.0-dist/js/bootstrap.min.js"></script>
+<script>
+//구조 분해 할당1
+var arr1 = [10,20];
+/* var x1 = arr1[0];
+var y1 = arr1[1]; */
+var [x1, y1] = arr1;
+console.log("x1:",x1);
+console.log("y1:",y1);
+
+//구조 분해 할당2
+var arr2 = [10,20,30,40,50];
+var [x2,y2, ...rest] = arr2; // ...: rest parameter(operator)
+console.log("x2:",x2);
+console.log("y2:",y2);
+console.log("rest:",rest);
+
+var arr2 = [...arr2, 60 ,70];  // ...: spread operator
+console.log(arr2);
+console.log("rest:",rest);
+
+//객체 구조 분해 할당
+var obj1 = {x:3,y:5,z:7, name:"홍길동"};
+/* var x3 = obj1.x;
+var y3 = obj1.y; */
+
+/* var {x, y} = obj1;
+console.log(x);
+console.log(y);
+ */
+ 
+ var {x, y, ...rest1} = obj1;
+ console.log("x:",x);
+ console.log("y:",y);
+ console.log("rest:",rest1);
+var obj2 = {k:9, m:10, ...obj1};//concat 과 비슷
+console.log(obj2);
+
+obj2 = {x:30, ...obj2}; // 안바뀜
+console.log(obj2);
+
+obj2 = {...obj2, x:30}; // 바뀜
+console.log(obj2);
+
+
+</script>
+</head>
+<body>
+	<div class="card">
+		<div class="card-header">구조 분해 할당</div>
+		<div class="card-body">
+			
+			
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet"
+	href="/javascript/common/bootstrap-4.6.0-dist/css/bootstrap.min.css">
+<script src="/javascript/common/jquery/jquery-3.5.1.min.js"></script>
+<script
+	src="/javascript/common/bootstrap-4.6.0-dist/js/bootstrap.bundle.min.js"></script>
+<script
+	src="/javascript/common/bootstrap-4.6.0-dist/js/bootstrap.min.js"></script>
+<script>
+	console.log(window.innerWidth);
+	console.log(window.innerHeight);
+	
+	window.console.log("콘솔은 윈도우의 속성");
+	// window. 은 생략가능
+	function changeURL() {
+		location.href="http://www.naver.com";
+	}
+	const refreshPage = () => {
+		location.reload();
+	};
+	function openPopup(){
+	// Open a new window
+	var myWindow = window.open("exam02_popup.html", "myWindow", "width=400, height=300");
+	console.log(myWindow.opener);
+	//myWindow.opener.close(); // 기존 윈도우가 닫힘 
+	var input = myWindow.opener.document.getElementById("txtData");
+	input.value = "홍길동";
+
+/* 	// Write some text in the new window
+	myWindow.document.write("<p>This is 'myWindow'</p>");     
+
+	// Write some text in the window that created the new window            
+	myWindow.opener.document.write("<p>This is the source window!</p>"); */
+		
+	}
+
+</script>
+</head>
+<body>
+	<div class="card">
+		<div class="card-header">Global Function 사용하기</div>
+		<div class="card-body">
+			<button class="btn btn-primary btn-sm" onclick="changeURL()">네이버</button>
+			<button class="btn btn-primary btn-sm" onclick="refreshPage()">리로딩</button>
+			<button class="btn btn-primary btn-sm" onclick="openPopup()">팝업 윈도우 띄우기</button>
+
+			<hr/>
+			입력 양식: <input type="text" id="txtData"/>
+
+		</div>
+	</div>
+</body>
+</html>
